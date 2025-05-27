@@ -22,20 +22,20 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F3F4F6] via-[#E5E7EB] to-[#D1D5DB] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
+    <div className="min-h-screen bg-gradient-to-br from-[#1A365D] via-[#2A4365] to-[#2C5282] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8 bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-xl">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-[#2A4365]">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-[#1A365D]">
             Welcome back
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
+          <p className="mt-2 text-center text-sm text-[#4A5568]">
             Sign in to your account
           </p>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm space-y-4">
+          <div className="rounded-md space-y-4">
             <div>
-              <label htmlFor="emailOrPhone" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="emailOrPhone" className="block text-sm font-medium text-[#2D3748]">
                 Email or Phone Number
               </label>
               <input
@@ -44,7 +44,7 @@ const LoginPage = () => {
                 type="text"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#2A4365] focus:border-[#2A4365] focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2A4365] focus:border-transparent focus:z-10 sm:text-sm"
                 placeholder="john@example.com or +1 (555) 000-0000"
                 value={formData.emailOrPhone}
                 onChange={handleChange}
@@ -52,7 +52,7 @@ const LoginPage = () => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-[#2D3748]">
                 Password
               </label>
               <input
@@ -61,7 +61,7 @@ const LoginPage = () => {
                 type="password"
                 autoComplete="current-password"
                 required
-                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#2A4365] focus:border-[#2A4365] focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2A4365] focus:border-transparent focus:z-10 sm:text-sm"
                 placeholder="••••••••"
                 value={formData.password}
                 onChange={handleChange}
@@ -79,13 +79,13 @@ const LoginPage = () => {
                 checked={formData.rememberMe}
                 onChange={handleChange}
               />
-              <label htmlFor="rememberMe" className="ml-2 block text-sm text-gray-900">
+              <label htmlFor="rememberMe" className="ml-2 block text-sm text-[#2D3748]">
                 Remember me
               </label>
             </div>
 
             <div className="text-sm">
-              <a href="/forgot-password" className="font-medium text-[#2A4365] hover:text-[#1A365D]">
+              <a href="/forgot-password" className="font-medium text-[#2A4365] hover:text-[#1A365D] transition-colors duration-200">
                 Forgot your password?
               </a>
             </div>
@@ -94,7 +94,7 @@ const LoginPage = () => {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#2A4365] hover:bg-[#1A365D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2A4365] transition-colors duration-200"
+              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-[#2A4365] hover:bg-[#1A365D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2A4365] transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Sign in
             </button>
@@ -102,8 +102,8 @@ const LoginPage = () => {
         </form>
 
         <div className="text-sm text-center">
-          <a href="/signup" className="font-medium text-[#2A4365] hover:text-[#1A365D]">
-            Don't have an account? Sign up
+          <a href="/signup" className="font-medium text-[#2A4365] hover:text-[#1A365D] transition-colors duration-200">
+            Don't have an account? <span className="underline">Sign up</span>
           </a>
         </div>
       </div>
