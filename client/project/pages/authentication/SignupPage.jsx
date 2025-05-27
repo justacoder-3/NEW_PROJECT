@@ -26,21 +26,21 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F3F4F6] via-[#E5E7EB] to-[#D1D5DB] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
+    <div className="min-h-screen bg-gradient-to-br from-[#1A365D] via-[#2A4365] to-[#2C5282] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8 bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-xl">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-[#2A4365]">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-[#1A365D]">
             Create your account
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
+          <p className="mt-2 text-center text-sm text-[#4A5568]">
             Join OnlyStags today
           </p>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm space-y-4">
+          <div className="rounded-md space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="firstName" className="block text-sm font-medium text-[#2D3748]">
                   First Name
                 </label>
                 <input
@@ -48,14 +48,14 @@ const SignupPage = () => {
                   name="firstName"
                   type="text"
                   required
-                  className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#2A4365] focus:border-[#2A4365] focus:z-10 sm:text-sm"
+                  className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2A4365] focus:border-transparent focus:z-10 sm:text-sm"
                   placeholder="John"
                   value={formData.firstName}
                   onChange={handleChange}
                 />
               </div>
               <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="lastName" className="block text-sm font-medium text-[#2D3748]">
                   Last Name
                 </label>
                 <input
@@ -63,7 +63,7 @@ const SignupPage = () => {
                   name="lastName"
                   type="text"
                   required
-                  className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#2A4365] focus:border-[#2A4365] focus:z-10 sm:text-sm"
+                  className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2A4365] focus:border-transparent focus:z-10 sm:text-sm"
                   placeholder="Doe"
                   value={formData.lastName}
                   onChange={handleChange}
@@ -72,7 +72,7 @@ const SignupPage = () => {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-[#2D3748]">
                 Email address
               </label>
               <input
@@ -81,7 +81,7 @@ const SignupPage = () => {
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#2A4365] focus:border-[#2A4365] focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2A4365] focus:border-transparent focus:z-10 sm:text-sm"
                 placeholder="john@example.com"
                 value={formData.email}
                 onChange={handleChange}
@@ -89,7 +89,7 @@ const SignupPage = () => {
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="phone" className="block text-sm font-medium text-[#2D3748]">
                 Phone Number
               </label>
               <input
@@ -98,7 +98,7 @@ const SignupPage = () => {
                 type="tel"
                 autoComplete="tel"
                 required
-                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#2A4365] focus:border-[#2A4365] focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2A4365] focus:border-transparent focus:z-10 sm:text-sm"
                 placeholder="+1 (555) 000-0000"
                 value={formData.phone}
                 onChange={handleChange}
@@ -106,7 +106,7 @@ const SignupPage = () => {
             </div>
 
             <div>
-              <label htmlFor="age" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="age" className="block text-sm font-medium text-[#2D3748]">
                 Age
               </label>
               <input
@@ -115,7 +115,7 @@ const SignupPage = () => {
                 type="number"
                 required
                 min="18"
-                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#2A4365] focus:border-[#2A4365] focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2A4365] focus:border-transparent focus:z-10 sm:text-sm"
                 placeholder="25"
                 value={formData.age}
                 onChange={handleChange}
@@ -123,7 +123,7 @@ const SignupPage = () => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-[#2D3748]">
                 Password
               </label>
               <input
@@ -132,7 +132,7 @@ const SignupPage = () => {
                 type="password"
                 autoComplete="new-password"
                 required
-                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#2A4365] focus:border-[#2A4365] focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2A4365] focus:border-transparent focus:z-10 sm:text-sm"
                 placeholder="••••••••"
                 value={formData.password}
                 onChange={handleChange}
@@ -140,7 +140,7 @@ const SignupPage = () => {
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-[#2D3748]">
                 Confirm Password
               </label>
               <input
@@ -149,7 +149,7 @@ const SignupPage = () => {
                 type="password"
                 autoComplete="new-password"
                 required
-                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#2A4365] focus:border-[#2A4365] focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 bg-white placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2A4365] focus:border-transparent focus:z-10 sm:text-sm"
                 placeholder="••••••••"
                 value={formData.confirmPassword}
                 onChange={handleChange}
@@ -160,16 +160,16 @@ const SignupPage = () => {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#2A4365] hover:bg-[#1A365D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2A4365] transition-colors duration-200"
+              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-[#2A4365] hover:bg-[#1A365D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2A4365] transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Sign up
+              Create Account
             </button>
           </div>
         </form>
 
         <div className="text-sm text-center">
-          <a href="/login" className="font-medium text-[#2A4365] hover:text-[#1A365D]">
-            Already have an account? Login
+          <a href="/login" className="font-medium text-[#2A4365] hover:text-[#1A365D] transition-colors duration-200">
+            Already have an account? <span className="underline">Login</span>
           </a>
         </div>
       </div>
